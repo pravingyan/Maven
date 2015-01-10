@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="LessonFive_Rozetka" verbose="1" >
+
+    <!-- Test Environment -->
+
+    <!-- Values for supportable browsers: "firefox", "chrome".-->
+    <parameter name="browser" value="chrome" />
+    <parameter name="shortTimeoutSecs" value="1" />
+    <parameter name="defaultTimeoutSecs" value="40" />
+    <parameter name="app_url" value="http://www.rozetka.com.ua" />
+
+    <!-- Test Data -->
+    <parameter name="registeredUserName" value="Forrest Gump" />
+    <parameter name="registeredUserEmail" value="forrest.gump@run.forrest.run" />
+    <parameter name="registeredUserPassword" value="QWer!@#$" />
+    <parameter name="phoneNumber" value="+380101231231" />
+    <parameter name="productSearchQuery" value="Apple MacBook Pro" />
+
+    <!--Test Classes-->
+    <test name="Search">
+        <classes>
+            <class name="ua.com.rozetka.tests.Search" />
+        </classes>
+    </test>
+
+    <test name="Account">
+        <classes>
+            <class name="ua.com.rozetka.tests.Authorization" />
+            <class name="ua.com.rozetka.tests.AccountCreation" />
+        </classes>
+    </test>
+
+    <test name="Checkout">
+        <classes>
+            <class name="ua.com.rozetka.tests.Checkout" />
+        </classes>
+    </test>
+
+</suite>

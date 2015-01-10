@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [LessonFive_Rozetka]">
+  <parameter name="shortTimeoutSecs" value="1"/>
+  <parameter name="defaultTimeoutSecs" value="20"/>
+  <parameter name="registeredUserName" value="Forrest Gump"/>
+  <parameter name="phoneNumber" value="+380101231231"/>
+  <parameter name="productSearchQuery" value="Apple MacBook Pro"/>
+  <parameter name="registeredUserEmail" value="forrest.gump@run.forrest.run"/>
+  <parameter name="browser" value="firefox"/>
+  <parameter name="app_url" value="http://www.rozetka.com.ua"/>
+  <parameter name="registeredUserPassword" value="QWer!@#$"/>
+  <test name="Search(failed)">
+    <classes>
+      <class name="ua.com.rozetka.tests.Authorization">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Authorization -->
+      <class name="ua.com.rozetka.tests.Search">
+        <methods>
+          <include name="searchResultsForContainsSearchQuery"/>
+          <include name="setUpBrowser"/>
+          <include name="searchQueryRemainsInSearchBoxTest"/>
+          <include name="finish"/>
+          <include name="searchResultsContainSearchProductTest"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Search -->
+      <class name="ua.com.rozetka.tests.Checkout">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Checkout -->
+      <class name="ua.com.rozetka.tests.AccountCreation">
+        <methods>
+          <include name="finish"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.AccountCreation -->
+    </classes>
+  </test> <!-- Search(failed) -->
+  <test name="Account(failed)">
+    <classes>
+      <class name="ua.com.rozetka.tests.Authorization">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="logOutTest"/>
+          <include name="finish"/>
+          <include name="logInTest"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Authorization -->
+      <class name="ua.com.rozetka.tests.Search">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Search -->
+      <class name="ua.com.rozetka.tests.Checkout">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Checkout -->
+      <class name="ua.com.rozetka.tests.AccountCreation">
+        <methods>
+          <include name="finish"/>
+          <include name="accountCreationTest"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.AccountCreation -->
+    </classes>
+  </test> <!-- Account(failed) -->
+  <test name="Checkout(failed)">
+    <classes>
+      <class name="ua.com.rozetka.tests.Authorization">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Authorization -->
+      <class name="ua.com.rozetka.tests.Search">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Search -->
+      <class name="ua.com.rozetka.tests.Checkout">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="checkoutPositive"/>
+          <include name="finish"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.Checkout -->
+      <class name="ua.com.rozetka.tests.AccountCreation">
+        <methods>
+          <include name="finish"/>
+        </methods>
+      </class> <!-- ua.com.rozetka.tests.AccountCreation -->
+    </classes>
+  </test> <!-- Checkout(failed) -->
+</suite> <!-- Failed suite [LessonFive_Rozetka] -->
