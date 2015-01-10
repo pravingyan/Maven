@@ -7,7 +7,7 @@
     <!-- Values for supportable browsers: "firefox", "chrome".-->
     <parameter name="browser" value="chrome" />
     <parameter name="shortTimeoutSecs" value="1" />
-    <parameter name="defaultTimeoutSecs" value="40" />
+    <parameter name="defaultTimeoutSecs" value="25" />
     <parameter name="app_url" value="http://www.rozetka.com.ua" />
 
     <!-- Test Data -->

@@ -1,6 +1,8 @@
 package ua.com.rozetka.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,15 +34,21 @@ public class Browser {
     }
 
     public void open() {
-        if (browserName.equalsIgnoreCase("firefox")) {
+        if (browserName.equalsIgnoreCase("firefox")) 
+        {
             driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("chrome")) {
+        } else if (browserName.equalsIgnoreCase("chrome")) 
+        {
             System.setProperty("webdriver.chrome.driver", "soft/chromedriver.exe");
             driver = new ChromeDriver();
-        } else {
+        } else 
+        {
             Logger.logError("Requested browser: " + browser + ". No such browser is available at the moment, starting FF.");
             driver = new FirefoxDriver();
         }
+
+		driver.manage().window().setPosition(new Point(-10, 0));
+		driver.manage().window().setSize(new Dimension(1400,570));
         startUsingDefaultTimeout();
     }
 
