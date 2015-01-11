@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -37,11 +38,18 @@ public class Browser {
         if (browserName.equalsIgnoreCase("firefox")) 
         {
             driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("chrome")) 
+        } 
+        else if (browserName.equalsIgnoreCase("chrome")) 
         {
             System.setProperty("webdriver.chrome.driver", "soft/chromedriver.exe");
             driver = new ChromeDriver();
-        } else 
+        }
+        else if (browserName.equalsIgnoreCase("ie")) 
+        {
+            System.setProperty("webdriver.ie.driver", "soft/IEDriverServer.exe");
+            driver =new InternetExplorerDriver();
+        }
+        else 
         {
             Logger.logError("Requested browser: " + browser + ". No such browser is available at the moment, starting FF.");
             driver = new FirefoxDriver();

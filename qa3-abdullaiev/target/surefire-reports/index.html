@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-LessonFive_Rozetka">
-                    <span>C:\Users\Laasya\Desktop\rozetka-master\src\test\resources\testng.xml</span>
+                    <span>C:\Users\Laasya\git\MavenTestNG_WorkingFineProject\qa3-abdullaiev\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -149,21 +149,14 @@
           <div class="suite-LessonFive_Rozetka-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">ua.com.rozetka.tests.Authorization</span>
+              <span class="class-name">ua.com.rozetka.tests.AccountCreation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logInTest">
-                  </a> <!-- logInTest -->
-                  <span class="method-name">logInTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logOutTest">
-                  </a> <!-- logOutTest -->
-                  <span class="method-name">logOutTest</span>
+                  <a name="accountCreationTest">
+                  </a> <!-- accountCreationTest -->
+                  <span class="method-name">accountCreationTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -215,14 +208,21 @@
           <div class="suite-LessonFive_Rozetka-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">ua.com.rozetka.tests.AccountCreation</span>
+              <span class="class-name">ua.com.rozetka.tests.Authorization</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="accountCreationTest">
-                  </a> <!-- accountCreationTest -->
-                  <span class="method-name">accountCreationTest</span>
+                  <a name="logInTest">
+                  </a> <!-- logInTest -->
+                  <span class="method-name">logInTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logOutTest">
+                  </a> <!-- logOutTest -->
+                  <span class="method-name">logOutTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -230,7 +230,7 @@
         </div> <!-- panel LessonFive_Rozetka -->
         <div panel-name="test-xml-LessonFive_Rozetka" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Laasya\Desktop\rozetka-master\src\test\resources\testng.xml</span>
+            <span class="header-content">C:\Users\Laasya\git\MavenTestNG_WorkingFineProject\qa3-abdullaiev\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -238,12 +238,12 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite verbose=&quot;0&quot; name=&quot;LessonFive_Rozetka&quot;&gt;
   &lt;parameter name=&quot;registeredUserName&quot; value=&quot;Forrest Gump&quot;/&gt;
-  &lt;parameter name=&quot;defaultTimeoutSecs&quot; value=&quot;20&quot;/&gt;
+  &lt;parameter name=&quot;defaultTimeoutSecs&quot; value=&quot;25&quot;/&gt;
   &lt;parameter name=&quot;shortTimeoutSecs&quot; value=&quot;1&quot;/&gt;
   &lt;parameter name=&quot;phoneNumber&quot; value=&quot;+380101231231&quot;/&gt;
   &lt;parameter name=&quot;productSearchQuery&quot; value=&quot;Apple MacBook Pro&quot;/&gt;
   &lt;parameter name=&quot;registeredUserEmail&quot; value=&quot;forrest.gump@run.forrest.run&quot;/&gt;
-  &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
   &lt;parameter name=&quot;app_url&quot; value=&quot;http://www.rozetka.com.ua&quot;/&gt;
   &lt;parameter name=&quot;registeredUserPassword&quot; value=&quot;QWer!@#$&quot;/&gt;
   &lt;test name=&quot;Search&quot;&gt;
@@ -309,36 +309,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchQueryRemainsInSearchBoxTest')
 data.setCell(0, 2, 'ua.com.rozetka.tests.Search')
-data.setCell(0, 3, 2);
+data.setCell(0, 3, 16);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchResultsContainSearchProductTest')
 data.setCell(1, 2, 'ua.com.rozetka.tests.Search')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'accountCreationTest')
-data.setCell(2, 2, 'ua.com.rozetka.tests.AccountCreation')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'searchResultsForContainsSearchQuery')
+data.setCell(2, 2, 'ua.com.rozetka.tests.Search')
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'checkoutPositive')
-data.setCell(3, 2, 'ua.com.rozetka.tests.Checkout')
-data.setCell(3, 3, 1);
+data.setCell(3, 1, 'logInTest')
+data.setCell(3, 2, 'ua.com.rozetka.tests.Authorization')
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'searchResultsForContainsSearchQuery')
-data.setCell(4, 2, 'ua.com.rozetka.tests.Search')
+data.setCell(4, 1, 'accountCreationTest')
+data.setCell(4, 2, 'ua.com.rozetka.tests.AccountCreation')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'logInTest')
+data.setCell(5, 1, 'logOutTest')
 data.setCell(5, 2, 'ua.com.rozetka.tests.Authorization')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'logOutTest')
-data.setCell(6, 2, 'ua.com.rozetka.tests.Authorization')
+data.setCell(6, 1, 'checkoutPositive')
+data.setCell(6, 2, 'ua.com.rozetka.tests.Checkout')
 data.setCell(6, 3, 0);
 window.suiteTableData['LessonFive_Rozetka']= { tableData: data, tableDiv: 'times-div-LessonFive_Rozetka'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 ms</span>
+              <span class="suite-total-time">Total running time: 16 ms</span>
               <div id="times-div-LessonFive_Rozetka">
               </div> <!-- times-div-LessonFive_Rozetka -->
             </div> <!-- times-div -->
@@ -357,7 +357,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">ua.com.rozetka.tests.AccountCreation</span>
+              <span class="ignored-class-name">ua.com.rozetka.tests.Authorization</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUpBrowser</span>
                 <br/>
@@ -377,83 +377,79 @@ return data;
               <div class="configuration-test before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">setUpBrowser(firefox, 1, 20, http://www.rozetka.com.ua)</span>
+                <span class="method-name">setUpBrowser(ie, 1, 25, http://www.rozetka.com.ua)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">searchQueryRemainsInSearchBoxTest</span>
-                <span class="method-start">52472 ms</span>
+                <span class="method-start">267 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.Search.searchQueryRemainsInSearchBoxTest())</span>
-                <span class="method-start">52474 ms</span>
+                <span class="method-start">283 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">searchResultsContainSearchProductTest</span>
-                <span class="method-start">52478 ms</span>
+                <span class="method-start">283 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.Search.searchResultsContainSearchProductTest())</span>
-                <span class="method-start">52479 ms</span>
+                <span class="method-start">283 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">searchResultsForContainsSearchQuery</span>
-                <span class="method-start">52483 ms</span>
+                <span class="method-start">283 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.Search.searchResultsForContainsSearchQuery())</span>
-                <span class="method-start">52483 ms</span>
+                <span class="method-start">283 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">52488 ms</span>
+                <span class="method-start">299 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">ua.com.rozetka.tests.Authorization</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ua.com.rozetka.tests.AccountCreation</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">setUpBrowser(firefox, 1, 20, http://www.rozetka.com.ua)</span>
-                <span class="method-start">52637 ms</span>
+                <span class="method-name">setUpBrowser(ie, 1, 25, http://www.rozetka.com.ua)</span>
+                <span class="method-start">361 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ua.com.rozetka.tests.Authorization</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">logInTest</span>
-                <span class="method-start">102782 ms</span>
+                <span class="method-start">361 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.Authorization.logInTest())</span>
-                <span class="method-start">102783 ms</span>
+                <span class="method-start">361 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">logOutTest</span>
-                <span class="method-start">102786 ms</span>
+                <span class="method-start">377 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.Authorization.logOutTest())</span>
-                <span class="method-start">102787 ms</span>
+                <span class="method-start">377 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ua.com.rozetka.tests.AccountCreation</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">accountCreationTest</span>
-                <span class="method-start">102792 ms</span>
+                <span class="method-start">393 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.AccountCreation.accountCreationTest())</span>
-                <span class="method-start">102793 ms</span>
+                <span class="method-start">393 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">ua.com.rozetka.tests.Authorization</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">102796 ms</span>
+                <span class="method-start">393 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -461,22 +457,20 @@ return data;
               <div class="configuration-test before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">setUpBrowser(firefox, 1, 20, http://www.rozetka.com.ua)</span>
-                <span class="method-start">102827 ms</span>
+                <span class="method-name">setUpBrowser(ie, 1, 25, http://www.rozetka.com.ua)</span>
+                <span class="method-start">424 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">checkoutPositive</span>
-                <span class="method-start">153111 ms</span>
+                <span class="method-start">439 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finish(public void ua.com.rozetka.tests.Checkout.checkoutPositive())</span>
-                <span class="method-start">153112 ms</span>
+                <span class="method-start">439 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">153114 ms</span>
+                <span class="method-start">439 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
